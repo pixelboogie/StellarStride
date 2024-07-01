@@ -2,19 +2,16 @@ import { HfInference } from '@huggingface/inference'
 
 const hf = new HfInference(process.env.HUGGING_FACE_KEY)
 
-// Text translation
-const textToTranslate = "It's fun to feed duck"
+const text = "Wow! It works! It really works!"
 
-const textTranslationResponse = await hf.translation({
-  model: 'facebook/mbart-large-50-many-to-many-mmt',
-  inputs: textToTranslate,
-  parameters: {
-      src_lang: "en_XX",
-      tgt_lang: "es_XX"
-  }
+const response = await hf.textToSpeech({
+    model: "espnet/kan-bayashi_ljspeech_vits",
+    inputs: text
 })
 
-const translation = textTranslationResponse.translation_text
-console.log("\ntranslation:\n")
-console.log(translation)
+console.log(response);
+
+const audioElement = document.getElementById('speech');
+const speechUrl = URL.createObjectURL(response);
+audioElement.src = speechUrl;
 
