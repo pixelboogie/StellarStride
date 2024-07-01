@@ -2,13 +2,19 @@ import { HfInference } from '@huggingface/inference'
 
 const hf = new HfInference(process.env.HUGGING_FACE_KEY)
 
-const textToClassify = "You a pretty darn cool."
+// Text translation
+const textToTranslate = "It's fun to feed duck"
 
-const response = await hf.textClassification({
-    model: "SamLowe/roberta-base-go_emotions",
-    inputs: textToClassify
+const textTranslationResponse = await hf.translation({
+  model: 'facebook/mbart-large-50-many-to-many-mmt',
+  inputs: textToTranslate,
+  parameters: {
+      src_lang: "en_XX",
+      tgt_lang: "es_XX"
+  }
 })
 
-console.log(response[0].label)
-console.log(response)
+const translation = textTranslationResponse.translation_text
+console.log("\ntranslation:\n")
+console.log(translation)
 
