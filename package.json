@@ -1,0 +1,15 @@
+{
+  "name": "Scrim-s0cmptacs5",
+  "description": "https://v2.scrimba.com/s0cmptacs5/",
+  "scripts": {
+    "start": "vite",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "huggingface": "1.4.0",
+    "vite": "latest"
+  },
+  "devDependencies": {}
+}
