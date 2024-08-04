@@ -4,16 +4,12 @@ Install the dependencies and run the project
 npm install
 npm start
 ```
-
 Head over to https://vitejs.dev/ to learn more about configuring vite
-## About Scrimba
 
-At Scrimba our goal is to create the best possible coding school at the cost of a gym membership! 💜
-If we succeed with this, it will give anyone who wants to become a software developer a realistic shot at succeeding, regardless of where they live and the size of their wallets 🎉
-The Frontend Developer Career Path aims to teach you everything you need to become a Junior Developer, or you could take a deep-dive with one of our advanced courses 🚀
+## About this project
 
-- [Our courses](https://scrimba.com/allcourses)
-- [The Frontend Career Path](https://scrimba.com/learn/frontend)
-- [Become a Scrimba Pro member](https://scrimba.com/pricing)
+This project is from the Scrimba course on open-source AI models. 
+It's a Text-to-Speech Web Application Using Hugging Face.js Inference Library.
+This is a web application that performs text-to-speech conversion utilizing the Hugging Face.js Inference library. The core objective of this application is to transform user-provided text into speech, leveraging state-of-the-art models available on the Hugging Face platform.
 
-Happy Coding!
+
